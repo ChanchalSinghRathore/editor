@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+        <div class="editor-container">
+            <div class="image-container" id="image-container">
+                <img src="https://via.placeholder.com/400x300" alt="Placeholder Image" id="main-image">
+            </div>
+            <div class="controls-container">
+                <div class="control-buttons">
+                    <button id="undo-btn" disabled><svg class="ur-btn"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                        <path d="M20 21V18.9231C20 16.9221 20 15.9217 19.8547 15.0846C19.0547 10.4765 15.0934 6.86243 10.0426 6.13259C9.12509 6 7.19318 6 5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M7 3C6.39316 3.58984 4 5.15973 4 6C4 6.84027 6.39316 8.41016 7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></button>
+                    <button id="redo-btn" disabled><svg class="ur-btn"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                        <path d="M4 21V18.9231C4 16.9221 4 15.9217 4.14533 15.0846C4.94529 10.4765 8.90656 6.86243 13.9574 6.13259C14.8749 6 16.8068 6 19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17 3C17.6068 3.58984 20 5.15973 20 6C20 6.84027 17.6068 8.41016 17 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></button>
+                </div>
+                
+                <div class="control-group">
+                    <label for="image-upload">Upload Image:</label>
+                    <input type="file" id="image-upload" accept="image/*">
+                </div>
+                
+                <div class="control-group">
+                    <label for="font-select">Font:</label>
+                    <select id="font-select">
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="font-size">Font Size:</label>
+                    <input type="number" id="font-size" value="20" min="10" max="100">
+                </div>
+                <div class="control-group">
+                    <label for="font-color">Font Color:</label>
+                    <input type="color" id="font-color" value="#000000">
+                </div>
+                <div class="control-group">
+                    <button id="bold-btn">B</button>
+                    <button id="italic-btn">I</button>
+                    <button id="underline-btn">U</button>
+                </div>
+                <button id="add-text-btn">Add Text</button>
+                <button id="delete-btn" style="display:none;">Delete Text</button>
+            </div>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
